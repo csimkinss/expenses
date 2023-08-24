@@ -115,6 +115,14 @@ body .balance strong {
   display: block;
   font-size: 1.75rem;
 }
+@media (max-width: 500px) {
+  body .balance {
+    padding: 1rem;
+  }
+  body .balance strong {
+    font-size: 1.55rem;
+  }
+}
 body .container {
   flex-shrink: 0;
   background-color: hsl(33, 100%, 98%);
@@ -160,7 +168,13 @@ body .container #chart .section .amount {
   border-radius: 0.2rem;
   color: white;
   padding: 0.25rem;
+  z-index: 2;
   display: none;
+}
+@media (max-width: 450px) {
+  body .container #chart .section .amount {
+    font-size: 0.75rem;
+  }
 }
 body .container #chart .section .bar {
   position: relative;
@@ -174,6 +188,7 @@ body .container #chart .section .bar {
 }
 body .container #chart .section .day {
   color: hsl(28, 10%, 53%);
+  vertical-align: sub;
 }
 body .container .total {
   display: flex;
@@ -188,9 +203,31 @@ body .container .total strong {
 body .container .total .monthly-total strong {
   font-size: 2.5rem;
 }
+@media (max-width: 450px) {
+  body .container .total .monthly-total strong {
+    font-size: 2rem;
+  }
+}
 body .container .total .interest {
   place-self: flex-end;
   text-align: end;
+}
+@media (max-width: 485px) {
+  body .container {
+    padding: 1rem;
+  }
+  body .container h2 {
+    font-size: 1.5rem;
+  }
+  body .container #chart {
+    padding-bottom: 1.25rem;
+  }
+  body .container .bar {
+    width: 95%;
+  }
+  body .container .day {
+    font-size: 0.75rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -22,6 +22,14 @@ body {
             display: block;
             font-size: 1.75rem;
         }
+
+        @media (max-width: 500px) {
+            padding: 1rem;
+
+            strong {
+                font-size: 1.55rem;
+            }
+        }
     }
     .container {
         flex-shrink: 0;
@@ -72,7 +80,13 @@ body {
                     border-radius: 0.2rem;
                     color: white;
                     padding: 0.25rem;
+                    z-index: 2;
                     display: none;
+
+                    @media(max-width: 450px) {
+                        font-size: 0.75rem;
+                    }
+
                 }
                 .bar {
                     position: relative;
@@ -86,6 +100,7 @@ body {
                 }
                 .day {
                     color: $medium-brown;
+                    vertical-align: sub;
                 }
             }
         }
@@ -102,11 +117,30 @@ body {
             .monthly-total {
                 strong {
                     font-size: 2.5rem;
+                    @media(max-width: 450px) {
+                        font-size: 2rem;
+                    }
                 }
             }
             .interest {
                 place-self: flex-end;
                 text-align: end;
+            }
+        }
+        @media (max-width: 485px) {
+            padding: 1rem;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+            #chart {
+                padding-bottom: 1.25rem;
+            }
+            .bar {
+                width: 95%;
+            }
+            .day {
+                font-size: 0.75rem;
             }
         }
     }
