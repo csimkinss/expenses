@@ -1,0 +1,17 @@
+{
+    "name": "expenses",
+    "version": "1.0.0",
+    "description": "![Design preview for the News homepage coding challenge](./design/desktop-preview.jpg)",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "sass --watch --update --style=expanded assets/scss/style.scss:assets/css/style.css",
+        "build": "sass --no-source-map --style=compressed assets/scss/style.scss:assets/css/style.css"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "sass": "^1.63.6",
+        "save-dev": "^0.0.1-security"
+    }
+}

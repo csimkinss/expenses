@@ -1,0 +1,196 @@
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* dm-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dm-sans-v14-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* dm-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/dm-sans-v14-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+body {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  padding: 1rem;
+  background-color: hsl(27, 66%, 92%);
+  font-family: "DM Sans";
+}
+body .balance {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(10, 79%, 65%);
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  color: hsl(27, 66%, 92%);
+}
+body .balance strong {
+  display: block;
+  font-size: 1.75rem;
+}
+body .container {
+  flex-shrink: 0;
+  background-color: hsl(33, 100%, 98%);
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 32rem;
+}
+body .container h2 {
+  color: hsl(25, 47%, 15%);
+  font-size: 1.75rem;
+  padding-bottom: 3rem;
+}
+body .container #chart {
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+  justify-content: space-between;
+  border-bottom: 2px solid hsl(27, 66%, 92%);
+  padding-bottom: 1.5rem;
+  height: 12rem;
+}
+body .container #chart .section {
+  padding-top: 3rem;
+  position: relative;
+  flex-basis: 3rem;
+  text-align: center;
+  place-self: end;
+}
+body .container #chart .section:hover .amount {
+  display: block;
+}
+body .container #chart .section:hover .bar {
+  opacity: 80%;
+}
+body .container #chart .section .amount {
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: hsl(25, 47%, 15%);
+  border-radius: 0.2rem;
+  color: white;
+  padding: 0.25rem;
+  display: none;
+}
+body .container #chart .section .bar {
+  position: relative;
+  height: 8.5rem;
+  margin: 0;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.24s ease-in-out;
+  transform-origin: bottom;
+}
+body .container #chart .section .day {
+  color: hsl(28, 10%, 53%);
+}
+body .container .total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  color: hsl(28, 10%, 53%);
+}
+body .container .total strong {
+  display: block;
+  color: hsl(25, 47%, 15%);
+}
+body .container .total .monthly-total strong {
+  font-size: 2.5rem;
+}
+body .container .total .interest {
+  place-self: flex-end;
+  text-align: end;
+}
+
+/*# sourceMappingURL=style.css.map */

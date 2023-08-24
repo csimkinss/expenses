@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    padding: 1rem;
+    background-color: $cream;
+    font-family: "DM Sans";
+
+    .balance {
+        display: flex;
+        justify-content: space-between;
+        background-color: $soft-red;
+        width: 100%;
+        max-width: 32rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        color: $cream;
+
+        strong {
+            display: block;
+            font-size: 1.75rem;
+        }
+    }
+    .container {
+        flex-shrink: 0;
+        background-color: $very-pale-orange;
+        margin: 0 auto;
+        border-radius: 1rem;
+        padding: 2rem;
+        width: 100%;
+        max-width: 32rem;
+
+        h2 {
+            color: $dark-brown;
+            font-size: 1.75rem;
+            padding-bottom: 3rem;
+        }
+
+        #chart {
+            display: flex;
+            gap: 0.5rem;
+            position: relative;
+            justify-content: space-between;
+            border-bottom: 2px solid $cream;
+            padding-bottom: 1.5rem;
+            height: 12rem;
+
+            .section {
+                padding-top: 3rem;
+                position: relative;
+                flex-basis: 3rem;
+                text-align: center;
+                place-self: end;
+
+                &:hover {
+                    .amount {
+                        display: block;
+                    }
+                    .bar {
+                        opacity: 80%;
+                    }
+                }
+
+                .amount {
+                    position: absolute;
+                    top: -2.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: $dark-brown;
+                    border-radius: 0.2rem;
+                    color: white;
+                    padding: 0.25rem;
+                    display: none;
+                }
+                .bar {
+                    position: relative;
+                    height: 8.5rem;
+                    margin: 0;
+                    background-color: $soft-red;
+                    border-radius: 0.25rem;
+                    cursor: pointer;
+                    transition: background-color 0.24s ease-in-out;
+                    transform-origin: bottom;
+                }
+                .day {
+                    color: $medium-brown;
+                }
+            }
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            color: $medium-brown;
+
+            strong {
+                display: block;
+                color: $dark-brown;
+            }
+            .monthly-total {
+                strong {
+                    font-size: 2.5rem;
+                }
+            }
+            .interest {
+                place-self: flex-end;
+                text-align: end;
+            }
+        }
+    }
+}
