@@ -67,6 +67,7 @@ async function getData() {
             case 5:
                 if (expense.day == "fri")
                     bar.style.backgroundColor = "hsl(186, 34%, 60%)";
+                break;
             case 6:
                 if (expense.day == "sat")
                     bar.style.backgroundColor = "hsl(186, 34%, 60%)";
